@@ -12,7 +12,7 @@ function App() {
   return (
     <div className='dashboard__handler'>
       
-        <div className='row'>
+        <div className='row m-0'>
           <div className='col-lg-4 p-0 m-0'>
             <SidebarDash />
           </div>
