@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Russo+One&display=swap');
+.dashboard__handler{
+    /* display: flex; */
+}
+.mySidebar__handler{
+    /* width: 30%; */
+    background-color: rgba(255, 255, 255, 1);
+    padding: 20px;
+    box-shadow: rgba(226, 236, 249, 0.5);
+}
+.mySidebar__handler .logo__text{
+    font-size: 26px;
+    padding: 10px;
+    line-height: 21.69px;
+    font-family: "Russo One", sans-serif;
+    font-weight: 400;
+    margin-bottom: 40px;
+}
+.mySidebar__handler .logo__text span{
+    color: rgba(1, 186, 233, 1);
+}
+.mySidebar__handler ul{
+    list-style: none;
+    padding: 0;
+}
+.mySidebar__handler ul.listItems__two{
+    margin-top: 60px;
+}
+.mySidebar__handler li{
+    padding: 10px 0;
+    transition: all .2s;
+}
+.mySidebar__handler li a{
+    text-decoration: none;
+    color: rgba(145, 151, 179, 1);
+    padding: 10px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    cursor: pointer;
+transition: all .2s;
+}
+.mySidebar__handler li i{
+transition: all .2s;
+padding-right: 10px;
+}
+.mySidebar__handler li:hover{
+    background-color: rgba(1, 186, 233, 1);
+    border-radius: 8px;
+}
+.mySidebar__handler li:hover a,
+.mySidebar__handler li:hover i
+{
+    color: rgba(255, 255, 255, 1);
+}
+.pro__banner__handler{
+    margin-top: 30px;
+padding: 30px;
+border-radius: 20px;
+background: linear-gradient(107.91deg, #01BAE9 7.37%, #0D151E 95.19%);
+
+}
+.pro__banner__content{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    color: rgba(255, 255, 255, 1);
+}
+.pro__banner__content a{
+    border-radius: 20px;
+    box-shadow: 2px 4px 4px 0px rgba(79, 42, 234, 0.17);
+    background: rgba(255, 255, 255, 1);
+    font-size: 16px;
+    padding: 20px 0;
+    margin-top: 20px;
+    font-weight: 600;
+    line-height: 21px;
+    letter-spacing: 0.01em;
+    text-align: center;
+    color: rgba(13, 21, 30, 1);
+transition: all .2s;
+    
+}
+.pro__banner__content a:hover{
+    color: rgba(255, 255, 255, 1);
+    background: rgba(13, 21, 30, 1);
+
+}
+.main__content{
+    /* width: 70%; */
+    /* padding: 20px; */
+    background-color: #f4f4f4;
+    height: 300vh;
+}
