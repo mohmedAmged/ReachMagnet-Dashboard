@@ -7,6 +7,7 @@ import MyInsights from './pages/myInsights/MyInsights';
 import MyOrders from './pages/myOrders/MyOrders';
 import MyProducts from './pages/myProducts/MyProducts';
 import MyQutations from './pages/myQutations/MyQutations';
+import MainContentHeader from './components/mainContentHeader/MainContentHeader';
 
 function App() {
   return (
@@ -17,11 +18,12 @@ function App() {
             <SidebarDash />
           </div>
           <div className='col-lg-8 p-0 m-0'>
-            <div className='main__content'>
+            <div className='main__content container'>
+              <MainContentHeader />
               <>
                 <Routes>
                   <Route path='/' element={<MyDashboard />} />
-                  <Route path='/insights' element={<MyInsights />} />
+                  <Route path='/catalog' element={<MyInsights />} />
                   <Route path='/orders' element={<MyOrders />} />
                   <Route path='/products' element={<MyProducts />} />
                   <Route path='/qutations' element={<MyQutations />} />
