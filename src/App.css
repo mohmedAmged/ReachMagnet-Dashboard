@@ -125,6 +125,7 @@
 .main__content {
     /* width: 70%; */
     padding: 0 40px;
+    padding-bottom: 150px;
     background-color: #f4f4f4;
-    height: 300vh;
+    /* height: 300vh; */
 }
