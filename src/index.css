@@ -6,6 +6,8 @@ body {
   font-size: 16px;
   font-family: "Poppins", sans-serif;
   /* height: 300vh; */
+  background-color: #f4f4f4;
+
 }
 *, *:before, *:after {
   box-sizing: border-box;

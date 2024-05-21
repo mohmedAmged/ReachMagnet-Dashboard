@@ -1,13 +1,11 @@
 import React from 'react'
-import MySearchSec from '../mySearchSec/MySearchSec'
 import './contentViewHeader.css'
-export default function ContentViewHeader() {
+export default function ContentViewHeader({title}) {
   return (
     <div className="content__view__header d-flex justify-content-between align-items-center">
         <h1>
-          Catalog
+          {title}
         </h1>
-        {/* <MySearchSec /> */}
       </div>
   )
 }

@@ -8,6 +8,7 @@ import MyOrders from './pages/myOrders/MyOrders';
 import MyProducts from './pages/myProducts/MyProducts';
 import MyQutations from './pages/myQutations/MyQutations';
 import MainContentHeader from './components/mainContentHeader/MainContentHeader';
+import NewCatalogItemForm from './components/newCatalogItemForm/NewCatalogItemForm';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
                 <Routes>
                   <Route path='/' element={<MyDashboard />} />
                   <Route path='/catalog' element={<MyInsights />} />
+                  <Route path='/catalog/addNewItem' element={<NewCatalogItemForm />} />
                   <Route path='/orders' element={<MyOrders />} />
                   <Route path='/products' element={<MyProducts />} />
                   <Route path='/qutations' element={<MyQutations />} />

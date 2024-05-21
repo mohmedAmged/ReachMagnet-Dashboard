@@ -2,6 +2,7 @@ import React from 'react'
 import ContentViewHeader from '../../components/contentViewHeader/ContentViewHeader'
 import './catalogContent.css'
 import cardImg from '../../assets/card-images/Rectangle 4705.png'
+import { NavLink } from 'react-router-dom'
 export default function MyInsights() {
   const cardListItems = [
     {
@@ -23,7 +24,7 @@ export default function MyInsights() {
   ]
   return (
     <div className='content__view__handler'>
-      <ContentViewHeader />
+      <ContentViewHeader title={'Catalog'}/>
       <div className="content__card__list">
         <div className="row">
           {
@@ -58,6 +59,13 @@ export default function MyInsights() {
             })
           }
         </div>
+      </div>
+      <div className='addNewItem__btn'>
+        <button>
+          <NavLink to='/catalog/addNewItem' className='nav-link'>
+            Add New Item
+          </NavLink>
+        </button>
       </div>
     </div>
   )
