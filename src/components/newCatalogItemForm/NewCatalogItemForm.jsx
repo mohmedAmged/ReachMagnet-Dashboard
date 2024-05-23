@@ -84,7 +84,7 @@ export default function NewCatalogItemForm() {
                         <div className="form-check">
                             <input type="checkbox" id="check1" className="form-check-input" />
                             <label htmlFor="check1" className='form-check-label'>
-                                Company provides door-to-door shipping for this item
+                                 door-to-door shipping
                             </label>
                         </div>
                     </div>

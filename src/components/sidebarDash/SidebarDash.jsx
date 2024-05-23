@@ -12,6 +12,7 @@ import icon9 from '../../assets/sidebar-icons/discount-shape 1.svg'
 import icon10 from '../../assets/sidebar-icons/message-question 1.svg'
 export default function SidebarDash() {
     const location = useLocation();
+    const [isSidebarExpanded, setIsSidebarExpanded] = useState(false);
     const activePath = location.pathname;
 
     const sidebarItems = [
@@ -70,55 +71,71 @@ export default function SidebarDash() {
             icon: icon10
         },
     ]
+
+    const toggleSidebar = () => {
+        setIsSidebarExpanded(!isSidebarExpanded);
+    };
     return (
-        <div className="mySidebar__handler">
-            <div className="container">
-                <h1 className='logo__text'>
-                    <span>Reach</span>Magnet
-                </h1>
-                <ul>
-                    {
-                        sidebarItems?.map((el) => {
-                            return (
-                                <li className={`d-flex justify-content-between align-items-center ${activePath === el.link ? 'active' : ''
-                                    }`}>
-                                    <Link to={el.link}>
-                                        <img src={el.icon} alt={el.title} />
-                                        {el.title}
-                                    </Link>
-                                    <i className="bi bi-chevron-right"></i>
-                                </li>
-                            )
-                        })
-                    }
-                </ul>
-                <ul className='listItems__two'>
-                    {
-                        sidebarItemsTwo?.map((el) => {
-                            return (
-                                <li className={`d-flex justify-content-between align-items-center ${activePath === el.link ? 'active' : ''
-                                    }`}>
-                                    <Link to={el.link}>
-                                        <img src={el.icon} alt={el.title} />
-                                        {el.title}
-                                    </Link>
-                                    <i className="bi bi-chevron-right"></i>
-                                </li>
-                            )
-                        })
-                    }
-                </ul>
-                <div className="pro__banner__handler text-center">
-                    <div className="pro__banner__content">
-                        <h3>
-                            Upgrade to  PRO to get access all Features!
-                        </h3>
-                        <NavLink className='nav-link'>
-                            Get Pro Now!
-                        </NavLink>
+        <>
+
+            <div className={`mySidebar__handler ${isSidebarExpanded ? 'expanded' : ''}`}>
+                <div className={`container ${isSidebarExpanded ? 'expanded' : ''}`}>
+                    <h1 className={`logo__text ${isSidebarExpanded ? 'expanded' : ''}`}>
+                        <span>Reach</span>Magnet
+                    </h1>
+                    <ul>
+                        <li className={`toggle__handler ${isSidebarExpanded ? 'expanded' : ''}`}>
+                            <div className={`sidebar-toggle text-center fs-2 ${isSidebarExpanded ? 'expanded' : ''}`} onClick={toggleSidebar}>
+                            {isSidebarExpanded ? '✕' : '☰'}
+                            </div>
+                        </li>
+                        
+                        {
+                            sidebarItems?.map((el) => {
+                                return (
+                                    <li key={el.index} className={`d-flex justify-content-between align-items-center ${activePath === el.link ? 'active' : ''
+                                        }`}>
+                                        <Link to={el.link}>
+                                            <img className={`${isSidebarExpanded ? 'expanded' : ''}`} src={el.icon} alt={el.title} />
+                                            <span className={`${isSidebarExpanded ? 'expanded' : ''}`}>{el.title}</span>
+                                        </Link>
+                                        {<i className={`bi bi-chevron-right ${isSidebarExpanded ? 'expanded' : ''}`} ></i>}
+                                    </li>
+                                )
+                            })
+                        }
+                    </ul>
+                    <ul className='listItems__two'>
+                        {
+                            sidebarItemsTwo?.map((el) => {
+                                return (
+                                    <li key={el.index} className={`d-flex justify-content-between align-items-center ${activePath === el.link ? 'active' : ''
+                                        }`}>
+                                        <Link to={el.link}>
+                                            <img src={el.icon} alt={el.title} />
+                                            <span className={`${isSidebarExpanded ? 'expanded' : ''}`}>{el.title}</span>
+                                        </Link>
+                                        {<i className={`bi bi-chevron-right ${isSidebarExpanded ? 'expanded' : ''}`}></i>}
+                                    </li>
+                                )
+                            })
+                        }
+                    </ul>
+
+                    <div className={`pro__banner__handler text-center ${isSidebarExpanded ? 'expanded' : ''}`}>
+                        <div className="pro__banner__content">
+                            <h3>
+                                Upgrade to  PRO to get access all Features!
+                            </h3>
+                            <NavLink className='nav-link'>
+                                Get Pro Now!
+                            </NavLink>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+            {isSidebarExpanded && <div className="overlaySide" onClick={toggleSidebar}></div>}
+        </>
+
     )
 }

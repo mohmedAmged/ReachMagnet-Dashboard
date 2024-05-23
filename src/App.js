@@ -12,42 +12,22 @@ import NewCatalogItemForm from './components/newCatalogItemForm/NewCatalogItemFo
 
 function App() {
   return (
-    <div className='dashboard__handler'>
-      
-        <div className='row m-0'>
-          <div className='col-lg-4 p-0 m-0'>
-            <SidebarDash />
-          </div>
-          <div className='col-lg-8 p-0 m-0'>
-            <div className='main__content container'>
-              <MainContentHeader />
-              <>
-                <Routes>
-                  <Route path='/' element={<MyDashboard />} />
-                  <Route path='/catalog' element={<MyInsights />} />
-                  <Route path='/catalog/addNewItem' element={<NewCatalogItemForm />} />
-                  <Route path='/orders' element={<MyOrders />} />
-                  <Route path='/products' element={<MyProducts />} />
-                  <Route path='/qutations' element={<MyQutations />} />
-                </Routes>
-              </>
-            </div>
-          </div>
-        
-      </div>
-      {/* <SidebarDash />
-      <div className='main__content'>
-        <>
-          <Routes>
-            <Route path='/' element={<MyDashboard />} />
-            <Route path='/insights' element={<MyInsights />} />
-            <Route path='/orders' element={<MyOrders />} />
-            <Route path='/products' element={<MyProducts />} />
-            <Route path='/qutations' element={<MyQutations />} />
-          </Routes>
-        </>
-      </div> */}
+    <div className='dashboard__handler d-flex'>
+    <SidebarDash />
+    <div className='main__content container'>
+      <MainContentHeader />
+      <>
+        <Routes>
+          <Route path='/' element={<MyDashboard />} />
+          <Route path='/catalog' element={<MyInsights />} />
+          <Route path='/catalog/addNewItem' element={<NewCatalogItemForm />} />
+          <Route path='/orders' element={<MyOrders />} />
+          <Route path='/products' element={<MyProducts />} />
+          <Route path='/qutations' element={<MyQutations />} />
+        </Routes>
+      </>
     </div>
+  </div>
   );
 }
 

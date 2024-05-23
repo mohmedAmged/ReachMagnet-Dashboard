@@ -52,3 +52,12 @@ text-align: left;
     width: 24px;
     height: 24px;
 }
+
+@media screen and (max-width: 600px){
+    .myFooter__search form input{
+        width: 125px;
+    }
+    .content__header h1{
+        font-size: 16px;
+    }
+}

@@ -115,3 +115,9 @@
     color: rgba(0, 158, 246, 1);
 
 }
+
+@media screen and (max-width: 600px){
+    .card__item{
+        width: 100%;
+    }
+}

@@ -107,7 +107,8 @@
     opacity: 0px;
     box-shadow: none;
     outline: none;
-    margin-right: 20px;
+    margin-right: 20px; 
+    cursor: pointer;
 }
 
 .catalog__check__points .check__item label {
@@ -117,4 +118,13 @@
     text-align: left;
     color: rgba(51, 51, 51, 1);
 
+}
+
+@media screen and (max-width: 600px){
+    .custom-input-container{
+        display: block;
+    }
+    .catalog__check__points .check__item input{
+        margin-right: 5px;
+    }
 }
