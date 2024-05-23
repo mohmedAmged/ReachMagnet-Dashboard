@@ -1,5 +1,6 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
+import { Offcanvas, Button } from 'react-bootstrap';
 import icon1 from '../../assets/sidebar-icons/key-square.svg'
 import icon2 from '../../assets/sidebar-icons/3d-square 1.svg'
 import icon3 from '../../assets/sidebar-icons/user-square 1.svg'
@@ -10,9 +11,9 @@ import icon7 from '../../assets/sidebar-icons/notification.svg'
 import icon8 from '../../assets/sidebar-icons/call-add.svg'
 import icon9 from '../../assets/sidebar-icons/discount-shape 1.svg'
 import icon10 from '../../assets/sidebar-icons/message-question 1.svg'
-export default function SidebarDash() {
+export default function SidebarDash({isSidebarExpanded, toggleSidebar}) {
     const location = useLocation();
-    const [isSidebarExpanded, setIsSidebarExpanded] = useState(false);
+    // const [isSidebarExpanded, setIsSidebarExpanded] = useState(false);
     const activePath = location.pathname;
 
     const sidebarItems = [
@@ -72,9 +73,21 @@ export default function SidebarDash() {
         },
     ]
 
-    const toggleSidebar = () => {
-        setIsSidebarExpanded(!isSidebarExpanded);
-    };
+    const [show, setShow] = useState(false);
+    const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 1024);
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
+ 
+
     return (
         <>
 
@@ -135,6 +148,9 @@ export default function SidebarDash() {
                 </div>
             </div>
             {isSidebarExpanded && <div className="overlaySide" onClick={toggleSidebar}></div>}
+
+    
+
         </>
 
     )

@@ -60,4 +60,7 @@ text-align: left;
     .content__header h1{
         font-size: 16px;
     }
+    .mainContentHeader__handler.expanded{
+        overflow: hidden;
+    }
 }
