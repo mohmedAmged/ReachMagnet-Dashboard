@@ -59,7 +59,6 @@
     left: 398px;
     gap: 0px;
     border-radius: 0px 0px 0px 20px;
-    opacity: 0px;
     background: rgba(213, 0, 18, 1);
     border: 2px solid rgba(213, 0, 18, 1);
     transition: ease-in-out .3s;
@@ -101,7 +100,6 @@
     padding: 8px 14px 8px 14px;
     gap: 0px;
     border-radius: 6px 0px 0px 0px;
-    opacity: 0px;
     background: rgba(0, 158, 246, 1);
     border: 2px solid rgba(0, 158, 246, 1);
     color: rgba(255, 255, 255, 1);
