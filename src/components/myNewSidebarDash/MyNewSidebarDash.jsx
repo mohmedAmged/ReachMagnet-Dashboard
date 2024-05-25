@@ -30,9 +30,9 @@ export default function MyNewSidebarDash() {
     const handleShow = () => setShow(true);
 
     const sidebarItems = [
-        { title: "Dashboard", link: "/", icon: icon1 },
+        { title: "Dashboard", link: "/dashboard", icon: icon1 },
         { title: "Catalog", link: "/catalog", icon: icon2 },
-        { title: "Products", link: "/products", icon: icon3 },
+        { title: "Quotations", link: "/quotations", icon: icon3 },
         { title: "Orders", link: "/orders", icon: icon4 },
         { title: "Insights", link: "/insights", icon: icon5 },
         { title: "Messages", link: "/messages", icon: icon6 },
@@ -49,7 +49,7 @@ export default function MyNewSidebarDash() {
         <>
             <ul>
                 {sidebarItems.map((el, index) => (
-                    <li key={index} className={`d-flex justify-content-between align-items-center ${activePath === el.link ? 'active' : ''}`}>
+                    <li key={index} className={`d-flex justify-content-between align-items-center ${location.pathname.startsWith(el.link) ? 'active' : ''} ${activePath === el.link ? 'active' : ''}`}>
                         <Link to={el.link} onClick={isMobile ? handleClose : undefined}>
                             <img src={el.icon} alt={el.title} />
                             <span>{el.title}</span>
