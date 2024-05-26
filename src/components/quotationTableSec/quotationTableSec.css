@@ -84,5 +84,6 @@
     }
     .quotationTable__content table tbody td .table__statu__btn{
         margin-right: 10px;
+        margin-bottom: 10px;
     }
 }

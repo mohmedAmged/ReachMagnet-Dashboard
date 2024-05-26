@@ -22,6 +22,7 @@ function App() {
           <Route path='/catalog' element={<MyInsights />} />
           <Route path='/catalog/:addNewItem' element={<NewCatalogItemForm />} />
           <Route path='/quotations' element={<MyQutations />} />
+          <Route path='/products' element={<MyProducts />} />
           <Route path='/orders' element={<MyOrders />} />
         </Routes>
       </div>

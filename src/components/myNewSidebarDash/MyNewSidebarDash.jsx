@@ -33,6 +33,7 @@ export default function MyNewSidebarDash() {
         { title: "Dashboard", link: "/dashboard", icon: icon1 },
         { title: "Catalog", link: "/catalog", icon: icon2 },
         { title: "Quotations", link: "/quotations", icon: icon3 },
+        { title: "Products", link: "/products", icon: icon4 },
         { title: "Orders", link: "/orders", icon: icon4 },
         { title: "Insights", link: "/insights", icon: icon5 },
         { title: "Messages", link: "/messages", icon: icon6 },

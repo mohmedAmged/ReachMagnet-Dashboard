@@ -88,7 +88,7 @@
 
 .addNewItem__btn {
     margin-top: 60px;
-    text-align: center;
+    text-align: right;
 }
 
 .addNewItem__btn button {
@@ -98,7 +98,7 @@
     left: 398px;
     padding: 8px 14px 8px 14px;
     gap: 0px;
-    border-radius: 6px 0px 0px 0px;
+    border-radius: 6px;
     background: rgba(0, 158, 246, 1);
     border: 2px solid rgba(0, 158, 246, 1);
     color: rgba(255, 255, 255, 1);

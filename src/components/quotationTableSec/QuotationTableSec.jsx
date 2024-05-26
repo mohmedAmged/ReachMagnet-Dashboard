@@ -22,10 +22,10 @@ export default function QuotationTableSec() {
                     </thead>
                     <tbody>
                         {tableData.map((row, index) => (
-                            <tr key={index}>
+                            <tr className='' key={index}>
                                 <td>{row.request}</td>
-                                <td>{row.country}</td>
-                                <td className='d-flex justify-content-between'>
+                                <td >{row.country}</td>
+                                <td >
                                     <button className={`${row.statusStyle} table__statu__btn`}>
                                         {row.status}
                                     </button>

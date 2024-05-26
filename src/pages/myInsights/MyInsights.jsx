@@ -51,7 +51,6 @@ export default function MyInsights() {
                           Edit
                         </button>
                       </>
-
                     </div>
                   </div>
                 </div>
